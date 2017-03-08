@@ -19,7 +19,9 @@ function countLetters(strings) {
 	}
 	// Prints the results
 	for (var key in results) {
-		console.log('Number of ocurrences of "' + key + '": ', results[key].count,' \tIndexes: ',results[key].ocurrences);
+		if (results.hasOwnProperty(key)) {
+			console.log('Number of ocurrences of "' + key + '": ', results[key].count,' \tIndexes: ',results[key].ocurrences);	
+		}
 	}
 }
 
